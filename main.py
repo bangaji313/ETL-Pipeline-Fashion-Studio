@@ -11,7 +11,7 @@ if __name__ == "__main__":
     GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/1sDRcgTyUDPXKVN-qgMHrshYGZB73VyNld7lFXanmjGI/edit?gid=0#gid=0'
     GOOGLE_SHEETS_CREDENTIALS = 'google-sheets-api.json' 
 
-    # Ganti dengan detail koneksi database PostgreSQL Anda
+    # Ganti dengan detail koneksi database PostgreSQL 
     POSTGRES_PARAMS = {
         "host": "localhost",
         "port": "5432",
