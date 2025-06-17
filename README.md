@@ -17,16 +17,17 @@ Proyek ini mensimulasikan tugas seorang *Data Engineer* di sebuah perusahaan ret
 ## ⚙️ Fitur Utama & Teknologi
 
 Pipeline ini dirancang dengan beberapa fitur utama untuk memastikan kualitas dan keandalan data:
--   [cite_start]**Modularitas**: Kode dipisahkan berdasarkan fungsinya (`extract`, `transform`, `load`) untuk keterbacaan dan pemeliharaan yang lebih baik.
--   [cite_start]**Pemuatan Multi-Repositori**: Data bersih dimuat ke tiga tujuan berbeda: **CSV**, **Google Sheets**, dan **PostgreSQL**.
--   [cite_start]**Penanganan Kesalahan**: Setiap fungsi utama dalam pipeline dilengkapi dengan blok `try-except` untuk menangani potensi eror saat runtime.
--   [cite_start]**Teruji (Unit Tested)**: Kualitas kode divalidasi dengan *unit test* menggunakan `pytest`, dengan *test coverage* mencapai lebih dari 80%.
+-   **Modularitas**: Kode dipisahkan berdasarkan fungsinya (`extract`, `transform`, `load`) untuk keterbacaan dan pemeliharaan yang lebih baik.
+-   **Pemuatan Multi-Repositori**: Data bersih dimuat ke tiga tujuan berbeda: **CSV**, **Google Sheets**, dan **PostgreSQL**.
+-   **Penanganan Kesalahan**: Setiap fungsi utama dalam pipeline dilengkapi dengan blok `try-except` untuk menangani potensi eror saat runtime.
+-   **Teruji (Unit Tested)**: Kualitas kode divalidasi dengan *unit test* menggunakan `pytest`, dengan *test coverage* mencapai lebih dari 80%.
 
 **Teknologi yang Digunakan:**
 -   **Bahasa**: Python 3
 -   **Library**: `requests`, `beautifulsoup4`, `pandas`, `sqlalchemy`, `psycopg2-binary`, `gspread`, `pytest`, `pytest-cov`
 
 ## 📁 Struktur Repository
+```
 ETL-Pipeline-Fashion-Studio/
 │
 ├── utils/                # Modul-modul utama pipeline
@@ -47,6 +48,7 @@ ETL-Pipeline-Fashion-Studio/
 ├── submission.txt        # Instruksi untuk reviewer
 ├── products.csv          # Output data bersih dalam format CSV
 └── google-sheets-api.json # Kredensial API Google Sheets
+```
 
 ## 🚀 Hasil Akhir
 
@@ -59,19 +61,19 @@ Berikut adalah bukti bahwa data telah berhasil dimuat ke dalam tabel `products` 
 
 Proyek ini berhasil mencapai beberapa target teknis utama yang menunjukkan kualitas dan keandalan pipeline yang dibangun:
 
-* [cite_start]**Pipeline ETL End-to-End Fungsional**: Pipeline yang dibangun mampu berjalan secara otomatis dari awal hingga akhir, mulai dari mengekstrak data dari 50 halaman web  hingga menghasilkan 850 baris data produk yang bersih dan siap pakai.
+* **Pipeline ETL End-to-End Fungsional**: Pipeline yang dibangun mampu berjalan secara otomatis dari awal hingga akhir, mulai dari mengekstrak data dari 50 halaman web hingga menghasilkan 850 baris data produk yang bersih dan siap pakai.
 
 * **Transformasi Data yang Komprehensif**: Proses transformasi berhasil menangani berbagai masalah kualitas data, termasuk:
-    * [cite_start]Menghapus data yang tidak valid, duplikat, dan bernilai null. 
-    * [cite_start]Mengonversi harga dari Dolar ke Rupiah dan membersihkan format data pada setiap kolom (Rating, Colors, Size, Gender) sesuai standar yang ditentukan. 
-    * [cite_start]Seluruh fungsi utama dalam pipeline dilengkapi dengan mekanisme *error handling* (`try-except`) untuk memastikan ketangguhan saat terjadi masalah, seperti kegagalan koneksi. 
-    * [cite_start]Data diperkaya dengan kolom `timestamp` untuk melacak waktu ekstraksi. 
+    * Menghapus data yang tidak valid, duplikat, dan bernilai null.
+    * Mengonversi harga dari Dolar ke Rupiah dan membersihkan format data pada setiap kolom (Rating, Colors, Size, Gender) sesuai standar yang ditentukan.
+    * Seluruh fungsi utama dalam pipeline dilengkapi dengan mekanisme *error handling* (`try-except`) untuk memastikan ketangguhan saat terjadi masalah, seperti kegagalan koneksi.
+    * Data diperkaya dengan kolom `timestamp` untuk melacak waktu ekstraksi.
 
-* [cite_start]**Pemuatan Data Multi-Destinasi**: Untuk menunjukkan fleksibilitas, data yang telah bersih berhasil dimuat secara otomatis ke tiga jenis repositori data yang berbeda: **file CSV**, **Google Sheets**, dan database **PostgreSQL**. 
+* **Pemuatan Data Multi-Destinasi**: Untuk menunjukkan fleksibilitas, data yang telah bersih berhasil dimuat secara otomatis ke tiga jenis repositori data yang berbeda: **file CSV**, **Google Sheets**, dan database **PostgreSQL**.
 
 * **Kode Teruji dengan Standar Tinggi**: Kualitas dan keandalan kode divalidasi melalui *unit testing* yang komprehensif menggunakan `pytest`.
-    * [cite_start]Pengujian berhasil mencapai **test coverage lebih dari 80%**, yang menandakan sebagian besar alur logika kode telah terverifikasi. 
-    * [cite_start]Pengujian untuk fungsi yang berinteraksi dengan layanan eksternal (seperti *web scraping*) dilakukan menggunakan teknik *mocking* untuk memastikan tes berjalan secara independen, cepat, dan andal.
+    * Pengujian berhasil mencapai **test coverage lebih dari 80%**, yang menandakan sebagian besar alur logika kode telah terverifikasi.
+    * Pengujian untuk fungsi yang berinteraksi dengan layanan eksternal (seperti *web scraping*) dilakukan menggunakan teknik *mocking* untuk memastikan tes berjalan secara independen, cepat, dan andal.
 
 ## 🚀 Cara Menjalankan Proyek
 
