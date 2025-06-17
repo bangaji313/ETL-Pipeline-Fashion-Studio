@@ -1,0 +1,23 @@
+# Python bytecode dan cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Folder Virtual Environment
+venv/
+venv_test/
+
+# File yang dihasilkan oleh proses ETL (Output)
+raw_products.csv
+products.csv
+
+# File hasil test coverage
+.coverage
+
+# Kredensial & File Sensitif (SANGAT PENTING!)
+google-sheets-api.json
+
+# File yang dihasilkan oleh OS atau Editor
+.DS_Store
+.vscode/
